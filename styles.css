@@ -22,20 +22,36 @@ body {
   min-height: 100vh;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at top left, rgba(76, 208, 109, 0.16), transparent 22%),
-    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.06), transparent 18%),
-    linear-gradient(180deg, #080808 0%, #050505 40%, #0c0c0c 100%);
+  background: #050505;
 }
 
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.02) 0, transparent 18%),
-    radial-gradient(circle at 70% 80%, rgba(76, 208, 109, 0.04) 0, transparent 15%),
-    repeating-linear-gradient(45deg, transparent 0 1.5px, rgba(255, 255, 255, 0.03) 1.5px 3.5px);
+  background: radial-gradient(circle at top left, rgba(76, 208, 109, 0.16), transparent 20%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.08), transparent 16%),
+    linear-gradient(180deg, #080808 0%, #050505 42%, #0c0c0c 100%);
   pointer-events: none;
   z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 20%, transparent 0, transparent 62%, rgba(76, 208, 109, 0.07) 63%, transparent 64%),
+    radial-gradient(circle at 20% 20%, transparent 0, transparent 69%, rgba(76, 208, 109, 0.04) 70%, transparent 71%),
+    radial-gradient(circle at 80% 15%, transparent 0, transparent 58%, rgba(255, 255, 255, 0.05) 59%, transparent 60%),
+    radial-gradient(circle at 80% 15%, transparent 0, transparent 66%, rgba(255, 255, 255, 0.03) 67%, transparent 68%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before,
+body::after {
+  mix-blend-mode: screen;
 }
 
 .page-shell {
@@ -50,7 +66,7 @@ body::before {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 16px 0;
+  padding: 18px 0;
 }
 
 .site-header {
@@ -60,20 +76,21 @@ body::before {
 .brand {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
+  text-decoration: none;
 }
 
-.brand-mark {
+.brand-logo {
   width: 52px;
   height: 52px;
-  display: grid;
-  place-items: center;
   border-radius: 14px;
-  background: rgba(76, 208, 109, 0.16);
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.08em;
+  background: rgba(255, 255, 255, 0.05);
+  object-fit: contain;
+}
+
+.brand-text {
+  display: grid;
+  gap: 4px;
 }
 
 .brand-label,
@@ -88,7 +105,7 @@ body::before {
 
 .brand-subtitle {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .site-nav {
@@ -101,12 +118,19 @@ body::before {
   color: var(--muted);
   text-decoration: none;
   font-size: 0.95rem;
-  transition: color 0.2s ease;
+  padding: 10px 0;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .site-nav a:hover,
 .site-nav a.active {
   color: var(--accent);
+}
+
+.site-nav a:focus-visible {
+  outline: 2px solid rgba(76, 208, 109, 0.95);
+  outline-offset: 4px;
+  border-radius: 999px;
 }
 
 main {
@@ -122,6 +146,30 @@ main {
 
 .hero-copy {
   max-width: 620px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.hero-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  object-fit: contain;
+}
+
+.hero-badge span {
+  color: var(--text);
+  font-size: 0.95rem;
 }
 
 .eyebrow {
@@ -157,16 +205,22 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
-  padding: 0 22px;
+  min-height: 52px;
+  padding: 0 24px;
   border-radius: 999px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.01em;
   transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .button:hover {
   transform: translateY(-1px);
+}
+
+.button:focus-visible {
+  outline: 3px solid rgba(76, 208, 109, 0.95);
+  outline-offset: 3px;
 }
 
 .button-primary {
@@ -186,11 +240,25 @@ main {
 }
 
 .panel-card {
-  padding: 24px;
+  padding: 26px;
   border: 1px solid var(--border);
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.02);
-  box-shadow: 0 26px 50px rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.16);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.panel-card:hover,
+.download-card:hover,
+.feature-list-item:hover,
+.feature-card:hover,
+.support-card:hover,
+.note-block:hover,
+.store-panel:hover,
+.page-heading:hover {
+  transform: translateY(-2px);
+  border-color: rgba(76, 208, 109, 0.18);
+  box-shadow: 0 28px 56px rgba(0, 0, 0, 0.18);
 }
 
 .panel-alt {
@@ -206,6 +274,7 @@ main {
 .note-block h3 {
   margin-top: 0;
   font-size: 1.35rem;
+  letter-spacing: -0.02em;
 }
 
 .feature-grid,
@@ -232,11 +301,12 @@ main {
 .note-block,
 .support-card,
 .store-panel {
-  padding: 28px;
+  padding: 32px;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.045);
   border: 1px solid var(--border);
-  margin-bottom: 24px;
+  margin-bottom: 28px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .download-grid {
@@ -265,12 +335,17 @@ main {
   text-align: center;
 }
 
-.support-link {
+..support-link {
   display: inline-block;
   margin-top: 14px;
   color: var(--accent);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.support-link:hover,
+.support-link:focus-visible {
+  color: #b7ffce;
 }
 
 .support-details ul {
@@ -315,6 +390,16 @@ main {
   margin: 0 0 10px;
 }
 
+.site-footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: #b7ffce;
+}
+
 @media (max-width: 860px) {
   .hero-section {
     grid-template-columns: 1fr;
@@ -342,5 +427,10 @@ main {
   .site-nav {
     width: 100%;
     justify-content: flex-start;
+  }
+
+  .hero-badge {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
