@@ -409,6 +409,10 @@ main {
   grid-template-columns: repeat(2, minmax(160px, 1fr));
 }
 
+.compact-store-buttons {
+  margin-top: 18px;
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   color: var(--muted);
