@@ -1,31 +1,25 @@
-# Billiard Labs Website - Agent Instructions
+Update AGENTS.md for the website project.
 
-## Tech Stack
-- Plain HTML and CSS only for now.
-- No frameworks, build tools, package managers, or JavaScript unless explicitly requested.
+Replace the current Workflow section with a Required Workflow section that says:
 
-## Project Structure
-- `index.html` - home page
-- `downloads.html` - downloads page
-- `ghostlabs.html` - Ghost Labs app page
-- `support.html` - support/contact page
-- `styles.css` - shared stylesheet
+Before making any code changes:
+1. Investigate the request.
+2. Identify all files that will be modified.
+3. Explain the planned implementation.
+4. Wait for approval before editing any files.
 
-## Coding Rules
-- Keep code simple, efficient, readable, and maintainable.
-- Use semantic HTML.
-- Use one shared CSS file.
-- Do not use inline styles.
-- Keep layout mobile-friendly.
-- Do not remove existing content unless asked.
-- Use placeholder links when real download/app links are not available.
+After approval:
+5. Make the changes.
+6. Verify HTML validity and navigation integrity.
+7. Summarize:
+   - Files modified
+   - Changes made
+   - Any follow-up recommendations
 
-## Design Rules
-- Clean billiards + technology feel.
-- Use black, white, gray, and Billiard Labs green.
-- Background may be inspired by the logo with subtle orbit/tech visuals.
-- Do not repeat the logo as a background wallpaper.
+Also add Navigation Rules:
+- Do not remove existing navigation items unless explicitly requested.
+- Do not rename pages unless explicitly requested.
+- Use relative links for internal site navigation.
+- Use external links only when explicitly provided or verified.
 
-## Workflow
-- Make changes in small phases.
-- After each change, summarize modified files.
+Do not modify any HTML or CSS files yet.
