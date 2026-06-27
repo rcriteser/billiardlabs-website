@@ -1,6 +1,4 @@
-Update AGENTS.md for the website project.
-
-Replace the current Workflow section with a Required Workflow section that says:
+# Required Workflow
 
 Before making any code changes:
 1. Investigate the request.
@@ -16,10 +14,9 @@ After approval:
    - Changes made
    - Any follow-up recommendations
 
-Also add Navigation Rules:
+## Navigation Rules
+
 - Do not remove existing navigation items unless explicitly requested.
 - Do not rename pages unless explicitly requested.
 - Use relative links for internal site navigation.
 - Use external links only when explicitly provided or verified.
-
-Do not modify any HTML or CSS files yet.
