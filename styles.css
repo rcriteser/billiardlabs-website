@@ -376,9 +376,15 @@ main {
 .documentation-image img {
   display: block;
   width: 100%;
-  max-width: 680px;
+  max-width: 720px;
   height: auto;
   border-radius: 12px;
+}
+
+.documentation-image p {
+  max-width: 720px;
+  margin: 16px 0 0;
+  line-height: 1.7;
 }
 
 .support-card {
