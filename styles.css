@@ -362,6 +362,25 @@ main {
   margin: 16px 0 0;
 }
 
+.documentation-image {
+  display: grid;
+  place-items: center;
+  margin: 24px auto 0;
+  padding: 16px;
+  max-width: 760px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.documentation-image img {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  border-radius: 12px;
+}
+
 .support-card {
   text-align: center;
 }
