@@ -342,6 +342,7 @@ main {
 
 .download-grid {
   grid-template-columns: repeat(2, minmax(240px, 1fr));
+  margin-bottom: 28px;
 }
 
 .download-card {
