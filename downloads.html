@@ -38,6 +38,21 @@
           <h2>Windows</h2>
           <p>Stable desktop installer for Windows 10 and later.</p>
           <a href="https://github.com/rcriteser/chip-tournament-releases/releases/download/v2.0.0-rc2/ChipTournament-2.0.0-build4-Windows-x64-Setup.exe" class="button button-primary">Download Windows</a>
+          <p class="windows-download-note">Windows download note: Because Chip Tournament is newly released, Microsoft Edge or Windows SmartScreen may warn that the installer is not commonly downloaded. The installer is digitally signed by Billiard Labs, LLC. Before installing, use the publisher check below.</p>
+          <div class="publisher-help">
+            <span class="publisher-help-text">Confirm that Windows shows Billiard Labs, LLC as the publisher</span>
+            <button type="button" class="publisher-help-button" aria-label="Show steps to verify Billiard Labs, LLC as the Windows installer publisher" aria-expanded="false" aria-controls="publisher-verification-steps">ⓘ</button>
+            <div id="publisher-verification-steps" class="publisher-help-content" role="tooltip">
+              <ol>
+                <li>Right-click the .exe</li>
+                <li>Choose Properties</li>
+                <li>Open the Digital Signatures tab</li>
+                <li>Select the signature</li>
+                <li>Click Details</li>
+                <li>Confirm the signer is Billiard Labs, LLC</li>
+              </ol>
+            </div>
+          </div>
         </article>
         <article class="download-card">
           <h2>macOS</h2>
@@ -69,5 +84,34 @@
       <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms &amp; Conditions</a></p>
     </footer>
   </div>
+  <script>
+    const publisherHelp = document.querySelector('.publisher-help');
+    const publisherHelpButton = publisherHelp.querySelector('.publisher-help-button');
+
+    const setPublisherHelpOpen = (isOpen) => {
+      publisherHelp.classList.toggle('is-open', isOpen);
+      publisherHelpButton.setAttribute('aria-expanded', String(isOpen));
+
+      if (!isOpen) {
+        publisherHelpButton.blur();
+      }
+    };
+
+    publisherHelpButton.addEventListener('click', () => {
+      setPublisherHelpOpen(!publisherHelp.classList.contains('is-open'));
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!publisherHelp.contains(event.target)) {
+        setPublisherHelpOpen(false);
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        setPublisherHelpOpen(false);
+      }
+    });
+  </script>
 </body>
 </html>

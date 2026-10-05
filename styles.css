@@ -357,6 +357,82 @@ main {
   margin: 14px 0 24px;
 }
 
+.download-card .windows-download-note {
+  margin: 20px 0 10px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.publisher-help {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+}
+
+.publisher-help-text {
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.publisher-help-button {
+  display: inline-grid;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+}
+
+.publisher-help-button:hover,
+.publisher-help-button:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.publisher-help-button:focus-visible {
+  outline: 3px solid rgba(76, 208, 109, 0.95);
+  outline-offset: 3px;
+}
+
+.publisher-help-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: calc(100% + 10px);
+  left: 0;
+  width: min(320px, calc(100vw - 72px));
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #151515;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.28);
+  color: var(--muted);
+}
+
+.publisher-help:hover > .publisher-help-content,
+.publisher-help:focus-within > .publisher-help-content,
+.publisher-help.is-open > .publisher-help-content {
+  display: block;
+}
+
+.publisher-help-content ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.publisher-help-content li + li {
+  margin-top: 6px;
+}
+
 .note-block p,
 .support-details p,
 .page-heading p {
