@@ -1,0 +1,19 @@
+{
+  "architecture": "arm64",
+  "artifact_name": "ChipTournament-2.0.0-build5-macOS-arm64.dmg",
+  "build": 5,
+  "candidate_commit": "b10e2901c83b51bab1ea69c8af2763e4eac68d29",
+  "direct_asset_url": "https://github.com/rcriteser/chip-tournament-releases/releases/download/v2.0.0-rc2/ChipTournament-2.0.0-build5-macOS-arm64.dmg",
+  "platform": "macos",
+  "platform_identifier": "macos-arm64",
+  "product": "chip-tournament",
+  "publication": {
+    "kind": "legacy-verified",
+    "release_tag": "v2.0.0-rc2",
+    "verification": "existing verified Build 5 release asset; legacy shared release"
+  },
+  "release_tag": "v2.0.0-rc2",
+  "schema_version": 1,
+  "sha256": "442fe7ee3ba8c919c6e6d25bc4cb4387572361fe98239a3eeab0894c116059ed",
+  "version": "2.0.0"
+}

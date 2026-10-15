@@ -1,0 +1,18 @@
+{
+  "architecture": "x64",
+  "artifact_name": "ChipTournament-2.0.0-build5-Windows-x64-Setup.exe",
+  "build": 5,
+  "direct_asset_url": "https://github.com/rcriteser/chip-tournament-releases/releases/download/v2.0.0-rc2/ChipTournament-2.0.0-build5-Windows-x64-Setup.exe",
+  "platform": "windows",
+  "platform_identifier": "windows-x64",
+  "product": "chip-tournament",
+  "publication": {
+    "kind": "legacy-verified",
+    "release_tag": "v2.0.0-rc2",
+    "verification": "existing verified Build 5 release asset; legacy shared release"
+  },
+  "release_tag": "v2.0.0-rc2",
+  "schema_version": 1,
+  "sha256": "28d5c3578b57eb3da250ed6b212e16911840a0e73a0e5969c6052d93415d522a",
+  "version": "2.0.0"
+}
