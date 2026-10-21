@@ -1,18 +1,42 @@
 {
   "architecture": "x64",
-  "artifact_name": "ChipTournament-2.0.0-build5-Windows-x64-Setup.exe",
-  "build": 5,
-  "direct_asset_url": "https://github.com/rcriteser/chip-tournament-releases/releases/download/v2.0.0-rc2/ChipTournament-2.0.0-build5-Windows-x64-Setup.exe",
+  "artifact_name": "ChipTournament-2.0.0-build6-Windows-x64-Setup.exe",
+  "build": 6,
+  "candidate_commit": "a1332f3a303f1fec0ec4aa876e6df41ddd4b3e27",
+  "direct_asset_url": "https://github.com/rcriteser/chip-tournament-releases/releases/download/v2.0.0-build6-windows-x64/ChipTournament-2.0.0-build6-Windows-x64-Setup.exe",
   "platform": "windows",
   "platform_identifier": "windows-x64",
+  "previous_pointer": {
+    "digest": "05926a09b5fc8b853eb5e6b65386f7cf56efaf1f8f7adf14586dae7520dc6193",
+    "pointer": {
+      "architecture": "x64",
+      "artifact_name": "ChipTournament-2.0.0-build5-Windows-x64-Setup.exe",
+      "build": 5,
+      "direct_asset_url": "https://github.com/rcriteser/chip-tournament-releases/releases/download/v2.0.0-rc2/ChipTournament-2.0.0-build5-Windows-x64-Setup.exe",
+      "platform": "windows",
+      "platform_identifier": "windows-x64",
+      "product": "chip-tournament",
+      "publication": {
+        "kind": "legacy-verified",
+        "release_tag": "v2.0.0-rc2",
+        "verification": "existing verified Build 5 release asset; legacy shared release"
+      },
+      "release_tag": "v2.0.0-rc2",
+      "schema_version": 1,
+      "sha256": "28d5c3578b57eb3da250ed6b212e16911840a0e73a0e5969c6052d93415d522a",
+      "version": "2.0.0"
+    }
+  },
   "product": "chip-tournament",
   "publication": {
-    "kind": "legacy-verified",
-    "release_tag": "v2.0.0-rc2",
-    "verification": "existing verified Build 5 release asset; legacy shared release"
+    "asset_digest": "sha256:3d858d83d2a8130212d67b0c1f1b8b60c5f8924eeb596d8200f60678435612f3",
+    "kind": "phase2-verified",
+    "release_id": 418998775,
+    "release_tag": "v2.0.0-build6-windows-x64",
+    "verified_state": "published"
   },
-  "release_tag": "v2.0.0-rc2",
+  "release_tag": "v2.0.0-build6-windows-x64",
   "schema_version": 1,
-  "sha256": "28d5c3578b57eb3da250ed6b212e16911840a0e73a0e5969c6052d93415d522a",
+  "sha256": "3d858d83d2a8130212d67b0c1f1b8b60c5f8924eeb596d8200f60678435612f3",
   "version": "2.0.0"
 }
